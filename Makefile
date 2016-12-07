@@ -15,16 +15,8 @@ SCRIPTS += $(SHIN:.sh.in=.sh)
 all: $(SCRIPTS)
 
 install: all
-	install -d $(DESTDIR)$(SBINDIR)
-	install -m755 mkimage.sh $(DESTDIR)$(SBINDIR)/void-mkimage
-	install -m755 mklive.sh $(DESTDIR)$(SBINDIR)/void-mklive
-	install -m755 mkrootfs.sh $(DESTDIR)$(SBINDIR)/void-mkrootfs
-	install -m755 installer.sh $(DESTDIR)$(SBINDIR)/void-installer
-	install -d $(DESTDIR)$(DRACUTMODDIR)
-	install -m755 dracut/*.sh $(DESTDIR)$(DRACUTMODDIR)
-	install -d $(DESTDIR)$(SHAREDIR)/void-mklive
-	install -m644 grub/*.cfg* $(DESTDIR)$(SHAREDIR)/void-mklive
-	install -m644 isolinux/*.cfg* $(DESTDIR)$(SHAREDIR)/void-mklive
+	@echo "This is not supported..."
+	@exit 1
 
 clean:
 	@echo "This is not supported..."
@@ -32,7 +24,7 @@ clean:
 
 dist:
 	@echo "Building distribution tarball for tag: v$(VERSION) ..."
-	-@git archive --format=tar --prefix=void-mklive-$(VERSION)/ \
-		v$(VERSION) | xz -9 > ~/void-mklive-$(VERSION).tar.xz
+	-@git archive --format=tar --prefix=void-live-$(VERSION)/ \
+		v$(VERSION) | xz -9 > ~/void-live-$(VERSION).tar.xz
 
 .PHONY: all clean install dist

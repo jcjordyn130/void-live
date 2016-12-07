@@ -1315,7 +1315,7 @@ menu_source() {
     DIALOG --title " Select installation source " \
         --menu "$MENULABEL" 8 70 0 \
         "Local" "Packages from ISO image" \
-        "Network" "Packages from official remote reposity"
+        "Network" "Packages from official remote reposity (DO NOT USE)"
     case "$(cat $ANSWER)" in
         "Local") src="local";;
         "Network") src="net";
@@ -1390,9 +1390,8 @@ DIALOG --title "${BOLD}${RED} Enter the void ... ${RESET}" --msgbox "\n
 Welcome to the Void Linux installation. A simple and minimal \
 Linux distribution made from scratch and built from the source package tree \
 available for XBPS, a new alternative binary package system.\n\n
-The installation should be pretty straightforward. If you are in trouble \
-please join us at ${BOLD}#voidlinux${RESET} on ${BOLD}irc.freenode.org${RESET}.\n\n
-${BOLD}http://www.voidlinux.eu${RESET}\n\n" 16 80
+Please note that this is a fork made by jcjordyn130.\n\n
+If you need support come to ${BOLD}#thelinuxgeekcommunity${RESET} on ${BOLD}irc.freenode.org${RESET}" 16 80
 
 while true; do
     menu
