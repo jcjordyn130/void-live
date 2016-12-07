@@ -1,0 +1,26 @@
+###############################################################################
+
+Welcome to the Void Linux Live system. Two users are available to log in:
+
+	- root:root
+	- user:user
+
+The `user` user additionally has `sudo(8)` permissions to run any 
+command without a password.
+
+To start the installation please type:
+
+    # void-installer
+
+and follow the on-screen instructions. To install additional software make
+sure to configure your network interface and then use:
+
+	- xbps-install(8) to install/update packages
+	- xbps-query(8) to query for package info
+
+To start the display manager (lxdm) please type:
+
+   # sv start lxdm
+   or with sudo
+   $ sudo sv start lxdm
+###############################################################################

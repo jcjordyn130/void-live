@@ -1,0 +1,8 @@
+# Not using glob here because we want to include mkimg.sh
+installer.sh
+mklive.sh
+# Don't include generated images
+*.img
+*.xz
+*.iso
+xbps-cachedir*
